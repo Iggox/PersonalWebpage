@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ig/Ar/Go</title>
+	<link rel="icon" type="image/png" sizes="16x16" href="./Assets/Favicon/favicon-16x16.png">
+	<link rel="stylesheet" href="normalize.css">				
+	<script src="modernizr.js"></script>
+	<link rel="stylesheet" href="general.css">
+	<link rel="stylesheet" href="index.css">
+</head>
+<body>
+	<header>
+		<nav id="escritorio-nav">
+			<div class="logo">Ig/Ar/Go.exe</div>
+			<div class="enlaces-nav-esc">
+				<ul class="enlaces-nav">
+					<li><a href="index.html">Inicio</a></li>
+					<li><a href="biografia.html">Biografía</a></li>
+					<li><a href="contacto.html">Contacto</a></li>
+				</ul>
+			</div>
+		</nav>
+		<nav id="responsive-nav">
+			<div class="logo">Ig/Ar/Go.exe</div>
+			<div class="menu-desplegable">
+				<div class="menu-icono" onclick="toggleMenu()">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<div class="menu-links">
+					<li><a href="index.html" onclick="toggleMenu()" class="menu-links-enlaces">Inicio</a></li>
+					<li><a href="biografia.html" onclick="toggleMenu()" class="menu-links-enlaces">Biografía</a></li>
+					<li><a href="contacto.html" onclick="toggleMenu()" class="menu-links-enlaces">Contacto</a></li>
+				</div>
+			</div>
+		</nav>
+		<div class="video-container" >
+			<video autoplay loop muted class="video-background">
+				<source src="./Assets/iStock-1193269492.mp4" type="video/mp4"></source>
+			</video>
+		</div>
+		<div class="title-container">
+			<p>Hola, mi nombre es</p>
+			<h1>Ignacio Ariel González</h1>
+			<span></span>
+			<p>Técnico superior en desarrollo de aplicaciones multiplataforma</p>
+		</div>
+	</header>
+	<div class="section-container">
+		<section id="perfil">
+			<div class="title-section">
+				<h2>Sobre mí</h2>
+				<span class="deco-span"></span>
+			</div>
+			<div class="section-pic-container">
+				<img src="./Assets/IAG_PF.jpg" alt="Ignacio Ariel González foto de perfil" class="profile-picture">
+			</div>
+			<div class="section-text">
+				<span class="deco-span"></span>
+				<p class="contenido-section">Soy Ignacio Ariel González, tengo 25 años y vivo en España. Desde corta edad me interesaron las computadoras y eso me llevó a estudiar para aprender más. 
+				Poseo un grado superior en desarrollo de Aplicaciones Multiplataforma y actualmente me encuentro inscrito para estudiar ingeniería informática en la universidad politécnica de Valencia. 
+				Pese a mi escasa experiencia laboral en el entorno de la tecnología, poseo grandes capacidades para aprender, adaptarme y cumplir.</p>
+				<div class="button-container">
+					<a href="biografia.html"><button type="button" class="boton boton-redirec-1" onclick="">Conóceme</button></a>
+					<a href="contacto.html"><button type="button" class="boton boton-redirec-2" onclick="">Contáctame</button></a>
+				</div>
+				<span class="deco-span"></span>
+			</div>
+			<div class="video-iframe-container">
+				<iframe src="https://www.youtube.com/embed/JcwHJv6fvaY" title="May 6, 2025 Videocurriculum" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen id="videocurriculum"></iframe>
+			</div>
+		</section>
+	</div>
+	<footer>
+		<div class="enlaces-nav-footer">
+			<ul class="enlaces-nav enlaces-nav-foot">
+				<li><a href="index.html">Inicio</a></li>
+				<li><a href="biografia.html">Biografía</a></li>
+				<li><a href="contacto.html">Contacto</a></li>
+			</ul>
+		</div>
+		<p>Copyright &#169; 2025 Ignacio Ariel González.</p>
+	</footer>
+	<script src="scriptmenu.js"></script>
+</body>
+</html>

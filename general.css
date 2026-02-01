@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+body {
+	font-family: "Poppins", sans-serif;
+	min-height: 100vh;
+}
+
+header {
+	font-family: Montserrat, sans-serif;
+}
+
+.external-pages {
+	color: cornflowerblue;
+	text-decoration: none;
+	transition: 1s;
+}
+
+.external-pages:hover {
+	color: blue;
+}
+
+
+/*-- Nav --*/
+
+
+nav, .enlaces-nav {
+	/* usar contenedores flex ayuda a crear una estructura mucho más responsiva */
+	display: flex; 
+
+}
+
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 8vh;
+	background-color: #292929;
+	justify-content: space-around;
+	align-items: center;
+	z-index: 999;
+}
+
+.enlaces-nav {
+	justify-content: space-around;
+	list-style: none;
+	font-size: 24px;
+	padding: 0;
+
+}
+
+.enlaces-nav-esc {
+	width: 30%;
+}
+
+.enlaces-nav a {
+	color: cornflowerblue;
+	text-decoration: underline;
+	text-decoration-color: #292929;
+	text-underline-offset: 2vh;
+	transition: 1s;
+}
+
+a:hover {
+	color: cyan;
+	text-decoration-color: cyan;
+}
+
+.logo {
+	background-image: linear-gradient(to right, cornflowerblue, gold);
+    color: transparent;
+    background-clip: text; 
+	font-size: 30px;
+}
+
+.logo:hover {
+	cursor: default;
+}
+
+
+/*-- Menu desplegable --*/
+
+#responsive-nav {
+	display: none; /* en principio estará oculto */
+}
+
+.menu-desplegable {
+	position: relative;
+	display: inline-block;
+}
+
+.menu-icono {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 24px;
+	width: 30px;
+	cursor: pointer;
+}
+
+.menu-icono span {
+	width: 100%;
+	height: 2px;
+	background-color: floralwhite;
+	transition: 0.5s;
+}
+
+.menu-links {
+	position:absolute;
+	top: 100%;
+	right: 0%;
+	width: fit-content;
+	max-height: 0;
+	overflow: hidden;
+	transition: 0.5s;
+	background-color: rgba(0, 0, 0, 0.5);;
+	border-radius: 10px;
+}
+
+.menu-links a {
+	display: block ;
+	padding: 20px;
+	text-align: center;
+	font-size: 24px;
+	color: white;
+	text-decoration: none;
+
+}
+
+.menu-links-enlaces:hover, .menu-links-enlaces:active {
+	color: red;
+}
+
+.menu-links li {
+	list-style: none;
+}
+
+.menu-links.open {
+	max-height: 300px;
+}
+
+
+
+/*-- Animación para mover y rotar icon casero --*/
+
+
+.menu-icono.open span:first-child {
+	transform: rotate(45deg) translate(10px, 5px);
+}
+.menu-icono.open span:nth-child(2) {
+	opacity: 0;
+}
+.menu-icono.open span:last-child {
+	transform: rotate(-45deg) translate(10px, -5px);
+}
+
+
+.menu-icono span:first-child {
+	transform: none;
+}
+.menu-icono span:nth-child(2) {
+	opacity: 1;
+}
+.menu-icono span:last-child {
+	transform: none;
+}
+
+
+
+/*-- Pie de página --*/
+
+
+footer {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #292929;
+	padding-top: 2vh;
+}
+
+.enlaces-nav-footer {
+	width: 50%;
+}
+
+
+/*-- mediaquery --*/
+
+
+@media screen and (max-width: 1200px) {
+
+	#escritorio-nav{
+		display: none;
+	}
+
+	#responsive-nav{
+		display: flex;
+		justify-content: space-evenly;
+	}
+
+	.menu-links a {
+		transition: 0.5s;
+	}
+
+	.enlaces-nav-footer {
+		width: 100%;
+	}
+
+	.enlaces-nav-foot {
+		justify-content: space-evenly;
+	}
+
+	a {
+		font-size: 1rem;
+	}
+
+	footer p {
+		text-align: center;
+	}
+}
+

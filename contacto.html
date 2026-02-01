@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ig/Ar/Go</title>
+	<link rel="icon" type="image/png" sizes="16x16" href="./Assets/Favicon/favicon-16x16.png">
+	<link rel="stylesheet" href="normalize.css">				
+	<script src="modernizr.js"></script>
+	<link rel="stylesheet" href="general.css">
+	<link rel="stylesheet" href="contacto.css">
+</head>
+<body>
+	<header>
+		<nav id="escritorio-nav">
+			<div class="logo">Ig/Ar/Go.exe</div>
+			<div class="enlaces-nav-esc">
+				<ul class="enlaces-nav">
+					<li><a href="index.html">Inicio</a></li>
+					<li><a href="biografia.html">Biografía</a></li>
+					<li><a href="contacto.html">Contacto</a></li>
+				</ul>
+			</div>
+		</nav>
+		<nav id="responsive-nav">
+			<div class="logo">Ig/Ar/Go.exe</div>
+			<div class="menu-desplegable">
+				<div class="menu-icono" onclick="toggleMenu()">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<div class="menu-links">
+					<li><a href="index.html" onclick="toggleMenu()" class="menu-links-enlaces">Inicio</a></li>
+					<li><a href="biografia.html" onclick="toggleMenu()" class="menu-links-enlaces">Biografía</a></li>
+					<li><a href="contacto.html" onclick="toggleMenu()" class="menu-links-enlaces">Contacto</a></li>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<section>
+		<div class="image-background-container">
+			<img src="./Assets/typewriter.jpg" alt="" class="image-background">
+		</div>
+		<div class="layout">
+			<p> </p>
+		</div>
+		<div class="formulario">
+			<h2>Contáctame</h2>
+			<p>Juntos, podemos hacer grandes cosas</p>
+			<form id="form-contact" action="contacto.php" method="post">
+				<label for="nombre y apellidos">Nombre</label>
+				<input type="text" id="nombre" name="nombre" placeholder=" Nombre*">
+				<label for="email">Email</label>
+				<input type="email" id="email" name="email" placeholder=" alguien@correo.com*" maxlength="60">
+				<label for="mensaje">Mensaje</label>
+				<textarea type="text" id="mensaje" name="mensaje" placeholder=" Escribe tu mensaje...*" cols="40" rows="5"></textarea>
+				<input type="submit" id="boton_envio" name="contacto" value="Enviar correo">
+			</form>
+		</div>
+	</section>
+	<footer>
+		<div class="enlaces-nav-footer">
+			<ul class="enlaces-nav enlaces-nav-foot">
+				<li><a href="index.html">Inicio</a></li>
+				<li><a href="biografia.html">Biografía</a></li>
+				<li><a href="contacto.html">Contacto</a></li>
+			</ul>
+		</div>
+		<p>Copyright &#169; 2025 Ignacio Ariel González.</p>
+	</footer>
+	<script src="scriptmenu.js"></script>
+</body>
+</html>
